@@ -14,7 +14,39 @@
                         </div>
                     @endif
 
-                    <a class="text-white">{{ __('You are logged in!') }}</a>
+                    <a class="text-white">  <tbody>
+                    <table class="table">
+  <thead>
+    <tr>
+      <th style="color:#FFFFFF" scope="col">#</th>
+      <th style="color:#FFFFFF" scope="col">Primeiro</th>
+      <th style="color:#FFFFFF" scope="col">Último</th>
+      <th style="color:#FFFFFF" scope="col">Nickname</th>
+    </tr>
+    </div>
+  </thead>
+  <tbody>
+    <tr>
+      <th style="color:#FFFFFF" scope="row">1</th>
+      <td style="color:#FFFFFF">Mark</td>
+      <td style="color:#FFFFFF">Otto</td>
+      <td style="color:#FFFFFF">@mdo</td>
+    </tr>
+    <tr>
+      <th style="color:#FFFFFF" scope="row">2</th>
+      <td style="color:#FFFFFF">Jacob</td>
+      <td style="color:#FFFFFF">Thornton</td>
+      <td style="color:#FFFFFF">@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+    </tbody></a>
                 </div>
             </div>
         </div>
