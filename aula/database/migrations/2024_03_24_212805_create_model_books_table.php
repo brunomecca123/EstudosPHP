@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('book', function (Blueprint $table) {
             $table->id();
             // $table->integer('id_user')->unsigned();
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('id_user')->constrained('users');
             $table->string('name');
             $table->integer('pages');
-            $table->double('preco', 10,2);
+            $table->double('preco');
             $table->timestamps();
         });
     }
