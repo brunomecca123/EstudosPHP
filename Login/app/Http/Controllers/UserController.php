@@ -8,22 +8,16 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    private $objUser;
-
-    public function __construct()
-    {
-        $this->objUser=new User();
-    }
+   
 
     public function index()
     {
-        $user=$this->objUser->all();
-        return view('index', compact('user'));
+        $users = User::all();
+        return view('home', compact('users'));
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+   
     public function create()
     {
         //
