@@ -27,23 +27,52 @@
         </div>
         </thead>
         <tbody>
+
           @foreach($users as $user)
           <tr>
-            <th style="color:#FFFFFF" scope="row"> {{ $user->id }} </th>
+            <th style="color:#FFFFFF"> {{ $user->id }} </th>
             <td style="color:#FFFFFF">{{ $user->name }}</td>
             <td style="color:#FFFFFF">{{ $user->email }}</td>
           </tr>
           @endforeach
-        </tbody>
-        </table>
         </tbody></a>
       </div>
     </div>
   </div>
+  
 </div>
+<div>
+  <canvas id="myChart"></canvas>
 </div>
-@endsection
-</form>
+
+
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  var user = "{{$userCount}}"
+  const ctx = document.getElementById('myChart');
+  
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label:'usuários',
+        data: [user, 19, 3, 5, 2, 3],
+        borderWidth: 5,
+        backgroundColor: '#FFB1C1',
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
 
 </html>
