@@ -15,6 +15,7 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <!-- <script src="path/to/chartjs/dist/chart.umd.js"></script> -->
 </head>
 <body>
     <div id="app">
